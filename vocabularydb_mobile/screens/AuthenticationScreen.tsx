@@ -1,8 +1,16 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, Button} from 'react-native';
 
-function AuthenticationScreen() {
-  return <Text>Authentication Screen!</Text>;
+function AuthenticationScreen({navigation}) {
+  return (
+    <>
+      <Text>Authentication Screen!</Text>
+      <Button
+        title="Navigate to Home Screen!"
+        onPress={() => navigation.navigate('HomeScreen')}
+      />
+    </>
+  );
 }
 
 export default AuthenticationScreen;
